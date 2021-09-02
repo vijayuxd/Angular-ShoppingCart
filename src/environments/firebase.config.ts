@@ -1,8 +1,11 @@
 export const FireBaseConfig = {
-  apiKey: "<YOUR_API_KEY>",
-  authDomain: "<YOUR_AUTH_DOMAIN>",
-  databaseURL: "<YOUR_DATABASE_URL>",
-  projectId: "<YOUR_PROJECT_ID>",
-  storageBucket: "<YOUR_STORAGE_BUCKETS>",
-  messagingSenderId: "<YOUR_MESSAGING_SENDER_ID>",
+  apiKey: "AIzaSyC4H2uu-UKWqz1Art0pi2xlcmtBmCXnH0E",
+  authDomain: "my-second-firebase-proje-3e207.firebaseapp.com",
+  databaseURL:
+    "https://my-second-firebase-proje-3e207-default-rtdb.firebaseio.com",
+  projectId: "my-second-firebase-proje-3e207",
+  storageBucket: "my-second-firebase-proje-3e207.appspot.com",
+  messagingSenderId: "45880136853",
+  appId: "1:45880136853:web:6488dee696d082a6ee779c",
+  measurementId: "G-95MJNHW8HL",
 };

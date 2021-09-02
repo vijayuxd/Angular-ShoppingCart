@@ -90,7 +90,8 @@
               ],
               "ngswConfigPath": "ngsw-config.json"
             }
-          }
+          },
+          "allowedCommonJsDependencies": ["angularfire2"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

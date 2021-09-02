@@ -14,6 +14,8 @@ import { ProductModule } from "./views/pages/product/product.module";
 import { UserModule } from "./views/pages/user/user.module";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
+import { AngularFireModule, FirebaseOptionsToken } from "angularfire2";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 
 /* to load and set en.json as the default application language */
 export function setupTranslateFactory(service: TranslateService) {
@@ -23,6 +25,8 @@ export function setupTranslateFactory(service: TranslateService) {
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, "fcc-book-trading"),
+    AngularFireDatabaseModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     IndexModule,
@@ -33,8 +37,6 @@ export function setupTranslateFactory(service: TranslateService) {
       enabled: environment.production,
       registrationStrategy: "registerImmediately",
     }),
-    // AngularFireModule.initializeApp(FireBaseConfig),
-    // AngularFireDatabaseModule,
   ],
   providers: [
     TranslateService,
@@ -44,6 +46,7 @@ export function setupTranslateFactory(service: TranslateService) {
       deps: [TranslateService],
       multi: true,
     },
+    { provide: FirebaseOptionsToken, useValue: environment.firebase },
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
